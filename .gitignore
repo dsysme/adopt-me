@@ -1,4 +1,4 @@
-node_moudules/
+./node_moudules/
 .DS_Store
 .cache/
 dist/
