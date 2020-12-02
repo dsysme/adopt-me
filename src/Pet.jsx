@@ -1,12 +1,18 @@
 import React from "react";
 
-const Pet = function Pet({ name, animal, bread }) {
+const Pet = function Pet({ name, key, animal, breed, media, location, id }) {
+  const image = media.length ? media[0].small : "http://placecorgi.com/300/300";
+  console.log(image);
   return (
-    <div>
-      <h1>{name}</h1>
-      <h1>{animal}</h1>
-      <h1>{bread}</h1>
-    </div>
+    <a href={`/details/${id}`} className="pet">
+      <div className="image-container">
+        <img src={image} alt={name}></img>
+      </div>
+      <div className="info">
+        <h1>{name}</h1>
+        <h2>{`${animal} - ${breed} - ${location}`}</h2>
+      </div>
+    </a>
   );
 };
 
