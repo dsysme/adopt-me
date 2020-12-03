@@ -1,12 +1,11 @@
 import React from "react";
 import Pet from "./Pet";
 
-const Results = function ({ pets }) {
-  console.log(pets);
+const Results = function ({ pets, animal, breed, location }) {
   return (
     <div className="search">
       {pets.length === 0
-        ? "Pets not found..."
+        ? `${animal} ${breed} ${location} not found...`
         : pets.map(function toPetComponent(pet) {
             console.log(
               `pet: name: ${pet.name} animal: ${pet.type} breed: ${pet.breeds.primary}`

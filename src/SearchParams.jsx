@@ -51,7 +51,12 @@ const SearchParams = function SearchParams() {
         <BreedDropdown />
         <button>Submit</button>
       </form>
-      <Results pets={pets}></Results>
+      <Results
+        pets={pets}
+        animal={animal}
+        breed={breed}
+        location={location}
+      ></Results>
     </div>
   );
 };
